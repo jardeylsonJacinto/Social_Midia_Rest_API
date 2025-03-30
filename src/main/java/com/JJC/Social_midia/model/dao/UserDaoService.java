@@ -3,6 +3,7 @@ package com.JJC.Social_midia.model.dao;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import com.JJC.Social_midia.model.User;
 
@@ -17,5 +18,10 @@ public class UserDaoService {
 
   public List<User> findAll() {
     return users;
+  }
+
+  public User findOne(int id) {
+    Predicate<? super User> predicate = user -> user.getId().equals(id);
+    return users.stream().filter(predicate).findFirst().get();
   }
 }
