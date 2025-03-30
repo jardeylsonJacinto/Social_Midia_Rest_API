@@ -1,4 +1,4 @@
-package com.JJC.Social_midia.model.dao;
+package com.JJC.Social_midia.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 
 import com.JJC.Social_midia.model.User;
 
-public class UserDaoService {
+public class UserService {
   private static List<User> users = new ArrayList<>();
   private static int usersCount = 0;
 

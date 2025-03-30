@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.JJC.Social_midia.model.User;
-import com.JJC.Social_midia.model.dao.UserDaoService;
+import com.JJC.Social_midia.service.UserService;
 
 @RestController
 public class UserController {
-  private UserDaoService service;
+  private UserService service;
 
-  public UserController(UserDaoService service) {
+  public UserController(UserService service) {
     this.service = service;
   }
 
