@@ -32,7 +32,7 @@ public class UserService {
 
   public User findOne(int id) {
     Predicate<? super User> predicate = user -> user.getId().equals(id);
-    return users.stream().filter(predicate).findFirst().get();
+    return users.stream().filter(predicate).findFirst().orElse(null);
   }
 
   public void deleteById(int id) {
