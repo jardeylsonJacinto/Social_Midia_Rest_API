@@ -5,8 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+import org.springframework.stereotype.Service;
+
 import com.JJC.Social_midia.model.User;
 
+@Service
 public class UserService {
   private static List<User> users = new ArrayList<>();
   private static int usersCount = 0;
